@@ -12,4 +12,3 @@ def fibonacci_sequence(n):
     return fibonacci_numbers[:n]
 
 # Test cases
-if __name__ == "__main__":
