@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-pow = __import__('1-power').pow
-
-print(pow(2, 2))
-print(pow(98, 2))
-print(pow(98, 0))
-print(pow(100, -2))
-print(pow(-4, 5))
+def pow(a, b):
+    # Base case: any number to the power of 0 is 1
+    if b == 0:
+        return 1
+    # If the exponent is negative, calculate the reciprocal
+    elif b < 0:
+        return 1 / pow(a, -b)
+    else:
+        result = 1
+        # Multiply 'a' by itself 'b' times
+        for _ in range(b):
+            result *= a
+        return result
