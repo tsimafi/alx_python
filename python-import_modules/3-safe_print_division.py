@@ -1,3 +1,4 @@
+#!usr/bin/python3
 def safe_print_division(a, b):
     try:
         result = a / b
@@ -7,7 +8,7 @@ def safe_print_division(a, b):
         print("Inside result: {}".format(result))
         return result
 
-# Test cases
+# Example usage:
 a = 12
 b = 2
 result = safe_print_division(a, b)
