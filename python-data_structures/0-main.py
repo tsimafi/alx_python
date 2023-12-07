@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-no_c = __import__('0-no_c').no_c
+for o-no_c import main
 
 print(no_c("Holberton School"))
 print(no_c("Chicago"))
