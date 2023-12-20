@@ -1,64 +1,75 @@
 #!/usr/bin/python3
-"""defines a rectangel class.""" 
-class rectangel(base)
-    """represent a rectangel."""
+"""
+Module: rectangle
+Description: This module contains the definition of the Rectangle class.
+"""
 
-    def__init__(self, width, height, x=0,y=0, id=none):
-        """initialize anew rectangel.
-        angel:
-              width (int): the wedth of the new rectangel.
-              height (int): the height of the new rectangel.
-              x (int): the x coordinate of the new rectangel.
-              y (int): the y coordinate of the new rectangel.
-              id (int): the identitiy of the new rectangel.
-        raises:
-               typeError: if either of width or height is not an int.
-               valueError: if either of width or height <= 0.
-               typeError: if either of x or y is not an int.
-               valueError: if either of x or y < 0.
+from models.base import Base
+
+class Rectangle(Base):
+    """
+    Rectangle class, inherits from Base.
+
+    Attributes:
+    - __width (int): Width of the rectangle.
+    - __height (int): Height of the rectangle.
+    - __x (int): x-coordinate of the rectangle.
+    - __y (int): y-coordinate of the rectangle.
+    """
+
+    def __init__(self, width, height, x=0, y=0, id=None):
         """
-        self.width = wedth
+        Initializes a new instance of the Rectangle class.
+
+        Args:
+        - width (int): Width of the rectangle.
+        - height (int): Height of the rectangle.
+        - x (int, optional): x-coordinate of the rectangle (default is 0).
+        - y (int, optional): y-coordinate of the rectangle (default is 0).
+        - id (int, optional): The ID to assign to the object (default is None).
+        """
+        super().__init__(id)
+        self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
-        """set/get the width of the Rectangle."""
+        """Getter for the width attribute."""
         return self.__width
-    
-    @wedth.setter
-    def wedth(self, value):
-        if type(value) !=int:
-            raise typeError("width must be an integer")
-        if value <= 0:
-            raise valueError("width must be > 0")
+
+    @width.setter
+    def width(self, value):
+        """Setter for the width attribute."""
         self.__width = value
 
     @property
     def height(self):
-        """set/get the height of the Rectangel."""
+        """Getter for the height attribute."""
         return self.__height
-
 
     @height.setter
     def height(self, value):
-        if type(value) !=int:
-            raise typeError("height must be an integer")
-        if value <= 0:
-            raise valueError("height must be > 0")
+        """Setter for the height attribute."""
         self.__height = value
 
     @property
     def x(self):
-        """set/get the x coordinate of the rectangel."""
+        """Getter for the x attribute."""
         return self.__x
 
     @x.setter
-    def x (self, value):
-        if type(value) != int:
-            raise typeError("x must be an integer")
-        if value < 0:
-            raise valueError("x must be >= 0")
+    def x(self, value):
+        """Setter for the x attribute."""
         self.__x = value
+
+    @property
+    def y(self):
+        """Getter for the y attribute."""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Setter for the y attribute."""
+        self.__y = value
