@@ -103,7 +103,7 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
-     def update(self, *args):
+    def update(self, *args):
         """
         Assigns an argument to each attribute in the following order:
         1st argument: id attribute
