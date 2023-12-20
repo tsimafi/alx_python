@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""defines a rectangel class."""
-from models.base import Base 
-
+"""defines a rectangel class.""" 
 class rectangel(base)
     """represent a rectangel."""
 
