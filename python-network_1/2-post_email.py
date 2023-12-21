@@ -12,5 +12,5 @@ if __name__ == "__main__":
     else:
         url = sys.argv[1]
         email = sys.argv[2]
-        print(f'Your email is: {email}')
+        print(f'Your email is: {test@test.com}')
         post_email(url, email)
