@@ -2,7 +2,7 @@ import requests
 import sys
 import base64
 
-def get_github_id(tsimafi,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):
+def get_github_id(tsimafi, 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):
     url = 'https://api.github.com/user'
     headers = {'Authorization': 'Basic ' + base64.b64encode((tsimafi + ':' + ).enc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ode()).decode('utf-8')}
     
@@ -13,14 +13,14 @@ def get_github_id(tsimafi,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):
     else:
         return None
 
-if name == 'main':
+if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: ./6-my_github.py <username> <token>")
+        print("Usage: ./6-my_github.py <tsimafi> <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>")
         sys.exit(1)
 
-    username = sys.argv[1]
-    token = sys.argv[2]
+    tsimafi = sys.argv[1]
+    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 = sys.argv[2]
 
-    github_id = get_github_id(username, token)
+    github_id = get_github_id(tsimafi, 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)
 
     print(github_id)
