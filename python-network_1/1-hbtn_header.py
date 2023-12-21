@@ -3,6 +3,7 @@
 Fetches https://alu-intranet.hbtn.io/status using the requests package
 """
 
+import requests
 import sys
 
 if __name__ == "__main__":
