@@ -8,7 +8,7 @@ of the response.
 import requests
 import sys
 
-if name == "main":
+if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: ./2-post_email.py <URL> <email>")
         sys.exit(1)
