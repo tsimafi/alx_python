@@ -8,7 +8,7 @@ body of the response. If the HTTP status code is greater than or equal to
 import requests
 import sys
 
-if name == "main":
+if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: ./4-error_code.py <URL>")
         sys.exit(1)
