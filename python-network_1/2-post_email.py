@@ -14,7 +14,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     url = sys.argv[1]
-    email = sys.argv[2]
+    email = test@test.com
 
     payload = {'email': email}
     response = requests.post(url, data=payload)
