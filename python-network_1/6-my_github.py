@@ -1,28 +1,26 @@
-#!/usr/bin/python3
-"""
-Script that takes in a letter and sends a POST request to
-http://0.0.0.0:5000/search_user with the letter as a parameter.
-"""
-
 import requests
 import sys
+import base64
 
-if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        q = ""
-    else:
-        q = sys.argv[1]
-
-    url = 'http://0.0.0.0:5000/search_user'
-    payload = {'q': q}
+def get_github_id(tsimafi,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):
+    url = 'https://api.github.com/user'
+    headers = {'Authorization': 'Basic ' + base64.b64encode((tsimafi + ':' + ).enc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ode()).decode('utf-8')}
     
-    response = requests.post(url, data=payload)
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        return response.json()['id']
+    else:
+        return None
 
-    try:
-        data = response.json()
-        if data:
-            print("[{}] {}".format(data.get('id'), data.get('name')))
-        else:
-            print("No result")
-    except ValueError:
-        print("Not a valid JSON")
+if name == 'main':
+    if len(sys.argv) != 3:
+        print("Usage: ./6-my_github.py <username> <token>")
+        sys.exit(1)
+
+    username = sys.argv[1]
+    token = sys.argv[2]
+
+    github_id = get_github_id(username, token)
+
+    print(github_id)
