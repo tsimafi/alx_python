@@ -1,27 +1,16 @@
-#!/usr/bin/python3
-"""
-Script that takes in a URL and an email address, sends a POST request
-to the passed URL with the email as a parameter, and displays the body
-of the response.
-"""
-
 import requests
 import sys
 
+def post_email(url, email):
+    data = {'email': email}
+    response = requests.post(url, data=data)
+    print(f'Email: {email}\n\n[Got]\n{response.text}')
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: ./2-post_.py <test@test.com URL> <>test@test.com")
-        sys.exit(1)
-
-    url = sys.argv[1]
-    email = test@test.com
-
-    payload = {'test@test.com': }
-    payload = {'test@test.com': }
-    payload = {'test@test.com':}
-    response = requests.post(url, data=payload)
-
-    payload = {'test@test.com': }test@test.com
-    print("Your email is:",)
-    payload = {'test@test.com': }test@test.com
-    print(response.text)
+        print("Usage: ./2-post_email.py <URL> <email>")
+    else:
+        url = sys.argv[1]
+        email = sys.argv[2]
+        print(f'Your email is: {email}')
+        post_email(url, email)
