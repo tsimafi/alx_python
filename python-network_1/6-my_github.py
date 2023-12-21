@@ -13,7 +13,7 @@ def get_github_id(tsimafi, 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):
     else:
         return None
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: ./6-my_github.py <tsimafi> <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>")
         sys.exit(1)
