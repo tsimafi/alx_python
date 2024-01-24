@@ -7,7 +7,7 @@ http://0.0.0.0:5000/search_user with the letter as a parameter.
 import requests
 import sys
 
-if __name__ == "__main__":
+if __name__ == "__main":
     if len(sys.argv) == 1:
         q = ""
     else:
