@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-Starts a Flask web application
-"""
+"""Starts a Flask web application"""
 
 from flask import Flask, render_template
 
-app = Flask(name)
+app = Flask(_name_)
 
 
 @app.route('/', strict_slashes=False)
@@ -45,5 +43,5 @@ def number_template(n):
     return render_template('5-number.html', n=n)
 
 
-if name == "main":
+if name == "_main_":
     app.run(host="0.0.0.0", port=5000)
