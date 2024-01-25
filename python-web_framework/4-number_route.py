@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" 
-Starts a Flask web application 
-"""
+""" Starts a Flask web application """
 
 from flask import Flask
 
-app = Flask(name)
+app = Flask(_name_)
 app.url_map.strict_slashes = False
 
 
