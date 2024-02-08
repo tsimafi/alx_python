@@ -1,7 +1,7 @@
 def no_c(my_string):
     new_string = ''
     for char in my_string:
-        if char != 'c' and char != 'C':
+        if char.lower() != 'c':
             new_string += char
     return new_string
 
@@ -9,4 +9,4 @@ def no_c(my_string):
 if __name__ == "__main__":
     print(no_c("Holberton School"))   # Output: Holberton Shool
     print(no_c("Chicago"))            # Output: hiago
-    print(no_c("C is fun!"))           # Output:  is fun!
+    print(no_c("C is fun!"))          # Output:  is fun!
