@@ -7,6 +7,8 @@ def no_c(my_string):
 
 # Test cases
 if __name__ == "__main__":
-    print(no_c("Holberton School"))   # Output: Holberton Shool
+    print(no_c("School"))   # Output: Holberton Shool
     print(no_c("Chicago"))            # Output: hiago
-    print(no_c("C is fun!"))          # Output:  is fun!
+    print(no_c("holberton school"))          # Output:  is fun!
+    print(no_c(""))
+    print(no_c("HellcCcccooccoscccss"))
