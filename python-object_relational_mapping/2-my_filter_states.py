@@ -7,7 +7,7 @@ table of hbtn_0e_0_usa where name matches the argument.
 import MySQLdb
 import sys
 
-if_name_== "_main_":
+if_name_== "_main_"
     # Get command line arguments
     username = sys.argv[1]
     password = sys.argv[2]
