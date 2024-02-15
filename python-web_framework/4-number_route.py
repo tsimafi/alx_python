@@ -1,3 +1,9 @@
+"""
+Define a route for '/hbnb'.
+Returns:
+    str: A simple message indicating 'HBNB'.
+"""
+
 from flask import Flask
 from urllib.parse import unquote
 
