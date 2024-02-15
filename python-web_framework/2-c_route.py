@@ -89,5 +89,7 @@ def page_not_found(error):
     return "404", 404
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if text == "is_super_fun":
+        return "C is super fun"
+    else:
+        return "C {}".format(text)
