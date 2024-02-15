@@ -5,7 +5,3 @@ def no_c(my_string):
             result += char
     return result
 
-# Test cases
-print(no_c("Holberton School"))   # Output: Holberton Shool
-print(no_c("Chicago"))             # Output: hiago
-print(no_c("C is fun!"))           # Output:  is fun!
