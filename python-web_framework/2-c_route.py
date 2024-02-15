@@ -29,7 +29,7 @@ Examples:
     $ curl 0.0.0.0:5000/c/julien
     C julien
     $ curl 0.0.0.0:5000/c/is_super_fun
-    C is super fun
+    C is_super_fun
     $ curl 0.0.0.0:5000/noroute
     404
 
