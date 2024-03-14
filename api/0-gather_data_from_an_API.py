@@ -40,3 +40,8 @@ if __name__ == "__main__":
         employee_id = int(employee_id)
     except ValueError:
         print("Employee ID must be an integer.")
+        sys.exit(1)
+    
+    employee_data = fetch_employee_data(employee_id)
+    if employee_data:
+        display_todo_progress(*employee_data)
