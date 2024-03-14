@@ -1,3 +1,5 @@
+"""A module containing a class for representing squares."""
+
 class Square:
     """A class representing a square.
 
